@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 class="container-fluid"> Create a new hero! </h1>
-    <form action="{% url 'superhero:create_new_hero' %}" method="post" class="container-fluid">
+    <form action="{% url 'superhero:create_new_hero' %}" method="post" class="container">
         {% csrf_token %}
         <div class="form-floating mb-3">
             <input type="text" name="name" id="name" class="form-control">
