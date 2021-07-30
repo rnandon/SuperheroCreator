@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Creator</title>
+</head>
+<body>
+    <h1> Editing {{selected_hero.name}} </h1>
+    <form action="{% url 'superhero:edit_hero' selected_hero.id %}" method="post">
+        {% csrf_token %}
+        Name:<input type="text" name="name" id="name" value= "{{selected_hero.name}}" ><br>
+        Alter Ego:<input type="text" name="alter_ego_name" id="alter_ego_name" value= "{{selected_hero.alter_ego_name}}" ><br>
+        Primary Superpower:<input type="text" name="primary_super_ability" id="primary_super_ability" value= "{{selected_hero.primary_super_ability}}" ><br>
+        Secondary Superpower:<input type="text" name="secondary_super_ability" id="secondary_super_ability" value= "{{selected_hero.secondary_super_ability}}" ><br>
+        Catchphrase:<input type="text" name="catchphrase" id="catchphrase" value= "{{selected_hero.catchphrase}}" ><br>
+        <input type="submit" value="Update">
+    </form>
+    <a href="{% url 'superhero:detail' selected_hero.pk %}">Cancel</a><br>
+</body>
+</html>

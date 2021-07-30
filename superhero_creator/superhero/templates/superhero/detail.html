@@ -7,12 +7,16 @@
     <title>Superhero Detail</title>
 </head>
 <body>
-    <h1> {{selected_hero}} </h1>
+    <h1> {{selected_hero.name}} </h1>
     <ul>
         <li> {{selected_hero.alter_ego_name}} </li>
         <li> {{selected_hero.primary_super_ability}} </li>
         <li> {{selected_hero.secondary_super_ability}} </li>
         <li> {{selected_hero.catchphrase}} </li>
     </ul>
+
+    <a href="{% url 'superhero:edit_hero' selected_hero.pk %}">Edit Superhero</a>
+    <a href="{% url 'superhero:delete_hero' selected_hero.pk %}">Delete Superhero</a>
+    <a href="{% url 'superhero:index' %}">Select New Hero</a>
 </body>
 </html>
