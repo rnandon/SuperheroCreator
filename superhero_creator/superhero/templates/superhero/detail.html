@@ -17,9 +17,9 @@
         <li> {{selected_hero.catchphrase}} </li>
     </ul>
 
-    <a href="{% url 'superhero:edit_hero' selected_hero.pk %}">Edit Superhero</a>
-    <a href="{% url 'superhero:delete_hero' selected_hero.pk %}">Delete Superhero</a>
-    <a href="{% url 'superhero:index' %}">Select New Hero</a>
+    <a href="{% url 'superhero:edit_hero' selected_hero.pk %}" class="btn btn-primary">Edit Superhero</a>
+    <a href="{% url 'superhero:delete_hero' selected_hero.pk %}" class="btn btn-primary">Delete Superhero</a>
+    <a href="{% url 'superhero:index' %}" class="btn btn-primary">Select New Hero</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
