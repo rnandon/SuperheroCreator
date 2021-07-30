@@ -9,17 +9,19 @@
 
 </head>
 <body>
-    <h1> {{selected_hero.name}} </h1>
-    <ul>
-        <li> {{selected_hero.alter_ego_name}} </li>
-        <li> {{selected_hero.primary_super_ability}} </li>
-        <li> {{selected_hero.secondary_super_ability}} </li>
-        <li> {{selected_hero.catchphrase}} </li>
+    <h1 class="container-fluid"> {{selected_hero.name}} </h1>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong> Alter Ego: </strong>  {{selected_hero.alter_ego_name}} </li>
+        <li class="list-group-item"><strong> Primary Super Power: </strong>  {{selected_hero.primary_super_ability}} </li>
+        <li class="list-group-item"><strong> Secondary Super Power: </strong>  {{selected_hero.secondary_super_ability}} </li>
+        <li class="list-group-item"><strong> Catchphrase: </strong>  {{selected_hero.catchphrase}} </li>
     </ul>
 
-    <a href="{% url 'superhero:edit_hero' selected_hero.pk %}" class="btn btn-primary">Edit Superhero</a>
-    <a href="{% url 'superhero:delete_hero' selected_hero.pk %}" class="btn btn-primary">Delete Superhero</a>
-    <a href="{% url 'superhero:index' %}" class="btn btn-primary">Select New Hero</a>
+    <div class="container-fluid">
+        <a href="{% url 'superhero:edit_hero' selected_hero.pk %}" class="btn btn-primary">Edit Superhero</a>
+        <a href="{% url 'superhero:delete_hero' selected_hero.pk %}" class="btn btn-primary">Delete Superhero</a>
+        <a href="{% url 'superhero:index' %}" class="btn btn-primary">Select New Hero</a>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
